@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-burgundy-dark: #270309;
+    --color-burgundy: #35030c;
+    --color-maroon: #510712;
+    --color-gold-antique: #d6b56d;
+    --color-gold-champagne: #f7e6b0;
+    --color-ivory: #fff7e7;
+    --color-shadow: #160105;
+  }
+
+  body {
+    font-family: 'Noto Serif Devanagari', serif;
+    background-color: var(--color-burgundy-dark);
+    color: var(--color-ivory);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-hindi {
+  font-family: 'Noto Serif Devanagari', serif;
+}
+
+.font-royal {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+/* Luxurious Gold Gradients & Text */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #fff7d6 0%, #f7e6b0 25%, #d6b56d 55%, #ba8e3b 85%, #fae8b4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(214, 181, 109, 0.35));
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #f7e6b0, #d6b56d, #8f6723, #f7e6b0) 1;
+}
+
+.gold-box-shadow {
+  box-shadow: 0 10px 30px -5px rgba(22, 1, 5, 0.8), 0 0 20px 0 rgba(214, 181, 109, 0.25);
+}
+
+.gold-glow {
+  filter: drop-shadow(0 0 12px rgba(214, 181, 109, 0.5));
+}
+
+/* Royal Velvet Texture Pattern */
+.bg-velvet {
+  background-color: #270309;
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(81, 7, 18, 0.8) 0%, rgba(53, 3, 12, 0.95) 50%, rgba(39, 3, 9, 1) 100%),
+    radial-gradient(rgba(214, 181, 109, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 24px 24px;
+}
+
+/* Traditional Ornate Border Frame */
+.royal-frame {
+  position: relative;
+  border: 2px solid #d6b56d;
+  background: linear-gradient(145deg, rgba(81, 7, 18, 0.7) 0%, rgba(39, 3, 9, 0.85) 100%);
+  box-shadow: inset 0 0 25px rgba(22, 1, 5, 0.9), 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.royal-frame::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(247, 230, 176, 0.4);
+  pointer-events: none;
+}
+
+/* Corner Ornaments */
+.corner-ornament-tl {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 28px;
+  height: 28px;
+  border-top: 4px solid #f7e6b0;
+  border-left: 4px solid #f7e6b0;
+  pointer-events: none;
+}
+.corner-ornament-tr {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 28px;
+  height: 28px;
+  border-top: 4px solid #f7e6b0;
+  border-right: 4px solid #f7e6b0;
+  pointer-events: none;
+}
+.corner-ornament-bl {
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  width: 28px;
+  height: 28px;
+  border-bottom: 4px solid #f7e6b0;
+  border-left: 4px solid #f7e6b0;
+  pointer-events: none;
+}
+.corner-ornament-br {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 28px;
+  height: 28px;
+  border-bottom: 4px solid #f7e6b0;
+  border-right: 4px solid #f7e6b0;
+  pointer-events: none;
+}
+
+/* Subtle Shimmer */
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(214,181,109,0.1) 0%, rgba(247,230,176,0.6) 50%, rgba(214,181,109,0.1) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3.5s infinite;
+}
+
+/* Floating Diya Flame */
+@keyframes flameFlicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); opacity: 0.95; }
+  50% { transform: scale(1.08) rotate(1.5deg); opacity: 1; filter: drop-shadow(0 0 10px #f59e0b); }
+}
+
+.diya-flame {
+  animation: flameFlicker 1.8s ease-in-out infinite alternate;
+}
+
+/* 3D Gate Perspective */
+.gate-perspective {
+  perspective: 1200px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #270309;
+}
+::-webkit-scrollbar-thumb {
+  background: #8f6723;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d6b56d;
+}
